@@ -17,8 +17,10 @@ in the viewer's browser.
 
 ## Evidence
 
-This replays **actual saved Gemini model outputs**, rather than running live
-inference during playback. Video activity is sampled at 4 FPS. Boxes are
+This replays **saved Gemini model outputs with documented visual-review
+corrections**, rather than running live inference during playback. The original
+video-model responses remain in `results/*.video.raw.json`. Any reviewed
+classification changes are recorded under `review_corrections` in the clip result. Video activity is sampled at 4 FPS. Boxes are
 independently localized at approximately 1 FPS and linearly interpolated. The
 exact analyzed source video is tied to each result by SHA-256.
 

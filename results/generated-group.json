@@ -70,17 +70,10 @@
       "segments": [
         {
           "start": 0,
-          "end": 10,
+          "end": 15.0,
           "state": "likely_reading",
           "confidence": "high",
-          "reason": "Gaze is directed downwards toward the open book on the desk."
-        },
-        {
-          "start": 10,
-          "end": 15.0,
-          "state": "other_activity",
-          "confidence": "high",
-          "reason": "Sits up straight and looks up away from the book toward the room."
+          "reason": "Head remains directed toward the open book throughout, including after sitting more upright during the final five seconds. Visually reviewed correction."
         }
       ],
       "page_turns": []
@@ -1751,6 +1744,41 @@
         }
       ],
       "time": 14.92
+    }
+  ],
+  "review_corrections": [
+    {
+      "reader_id": "reader_d",
+      "display_label": "Reader E",
+      "reviewed_at": "2026-10-08T10:25:21.175172+00:00",
+      "source": "User-reported error, verified by assistant visual inspection of the source video",
+      "method": "Review of the final 10\u201315 seconds at one frame per second, with full-frame context from the source contact sheet.",
+      "finding": "Sitting more upright does not interrupt the visible book-facing posture; the original other_activity interval was unsupported.",
+      "original_segments": [
+        {
+          "start": 0,
+          "end": 10,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Gaze is directed downwards toward the open book on the desk."
+        },
+        {
+          "start": 10,
+          "end": 15.0,
+          "state": "other_activity",
+          "confidence": "high",
+          "reason": "Sits up straight and looks up away from the book toward the room."
+        }
+      ],
+      "corrected_segments": [
+        {
+          "start": 0,
+          "end": 15.0,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Head remains directed toward the open book throughout, including after sitting more upright during the final five seconds. Visually reviewed correction."
+        }
+      ]
     }
   ]
 }
