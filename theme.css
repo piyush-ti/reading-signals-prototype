@@ -27,3 +27,23 @@ header{background:rgba(255,255,255,.55);backdrop-filter:blur(12px) saturate(180%
 .viewer.expanded{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;width:100vw;height:100dvh;max-width:none;border:0;border-radius:0;background:#18202a;box-shadow:none}
 .viewer.expanded .screen{flex:1 1 0;min-height:0;width:100%;aspect-ratio:auto!important}
 .viewer.expanded .controls{flex:0 0 auto;background:#fff;padding:14px 22px;min-height:65px;width:100%;z-index:5}
+
+/* Desktop workspace: video and every reader remain visible together. */
+@media(min-width:1000px){
+ .wrap{max-width:1800px}
+ .workspace{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px;align-items:start;padding-bottom:4px}
+ .workspace>.viewer{min-width:0}
+ .viewer:not(.expanded):not(:fullscreen) .screen{width:100%;max-height:calc(100dvh - 218px)}
+ .cards{margin:0;gap:6px;max-height:calc(100dvh - 150px);overflow-y:auto;padding-right:2px}
+ .card{grid-template-columns:minmax(0,1fr) auto;gap:3px 10px;padding:8px 12px;border-radius:12px}
+ .identity{gap:8px;min-width:0}.identity>div{min-width:0}
+ .avatar{height:30px;width:30px;border-radius:8px;font-size:13px}
+ .card h2{font-size:14px;line-height:1.2}
+ .clothing{font-size:12px;line-height:1.25;margin-top:3px}
+ .state{justify-self:end;font-size:12px;white-space:nowrap;gap:5px}
+ .stat{border-top:1px solid #eef1f4;padding-top:3px}
+ .stat:last-child{text-align:right}
+ .stat label{font-size:12px;line-height:1.25}
+ .timer{font-size:20px;line-height:1.1;margin-top:1px}
+ .pages{font-size:20px;line-height:1.1;margin-top:1px}
+}

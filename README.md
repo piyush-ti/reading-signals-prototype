@@ -2,7 +2,8 @@
 
 Standalone Marauder’s Map physical-book reading prototype. Play a clip to see
 person and book bounding boxes, estimated reading durations and candidate page
-turns. The player fills the page width; reader cards are stacked below it. The default
+turns. On desktop, the player sits on the left and compact reader cards sit on the right.
+On narrow screens, cards stack below the player. The default
 15-second generated overhead clip includes all six visible students, followed by
 the 15-second generated CCTV clip with all three visible people, then the supplied
 Getty clip with five. Overhead display labels run left to right at the first
