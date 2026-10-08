@@ -1,0 +1,54 @@
+{
+  "summary": "High-angle classroom scene monitoring two foreground students reading books. Reader A continuously stays focused on his book, turning a page around 4.75 seconds. Reader B reads her book while following along until 11 seconds (turning a page around 9.75 seconds), after which she turns her head away from the book.",
+  "people": [
+    {
+      "id": "reader_a",
+      "label": "Reader A",
+      "description": "person wearing blue shirt seated at the left foreground desk",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Maintains a steady downward head orientation looking at the open book on his desk throughout."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 4.75,
+          "confidence": "high",
+          "reason": "Lifts the right page and turns it over to rest on the left side."
+        }
+      ]
+    },
+    {
+      "id": "reader_b",
+      "label": "Reader B",
+      "description": "person wearing orange shirt seated at the right foreground desk",
+      "segments": [
+        {
+          "start": 0,
+          "end": 11,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Head is oriented towards the open book on her desk while reading."
+        },
+        {
+          "start": 11,
+          "end": 15,
+          "state": "other_activity",
+          "confidence": "high",
+          "reason": "Sits back in her chair and looks away from the book towards the side of the room."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 9.75,
+          "confidence": "high",
+          "reason": "Lifts a page from the right side and flips it to the left side."
+        }
+      ]
+    }
+  ]
+}

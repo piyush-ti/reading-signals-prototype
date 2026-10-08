@@ -1,0 +1,95 @@
+{
+  "synthetic": true,
+  "purpose": "Fictional demonstration; not real classroom evidence or reading-model validation.",
+  "provider": "Google Gemini API",
+  "model": "veo-3.1-fast-generate-preview",
+  "created_at": "2026-10-08T09:51:51.402439+00:00",
+  "requested_total_duration_seconds": 15,
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "method": "Fresh 8s text-to-video plus native 7s video extension, with no loops or speed changes.",
+  "documentation": "https://ai.google.dev/gemini-api/docs/veo#extending_veo_videos",
+  "pricing": {
+    "per_generated_second_usd": 0.1,
+    "estimated_total_usd": 1.5,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+    "note": "Estimate, not an invoice; extension billing not independently checked."
+  },
+  "negative_prompt": "fisheye, circular image, vignette, dark corners, black corners, black border, circular mask, camera HUD, camera interface, icons, logo, watermark, text, numbers, timestamp, lens readout, front view, frontal view, side view, low angle, eye-level camera, portrait, closeup, large people, cinematic framing, shallow focus, camera movement, pan, tilt, zoom, shaking, cut, scene change",
+  "base": {
+    "prompt": "An entirely synthetic photorealistic raw video from a modern fixed ceiling-corner classroom observation camera. A full, clean rectangular 16:9 image, evenly illuminated all the way to all four corners. Normal rectilinear lens with straight architectural lines, corrected distortion, clear corners. This is plain raw camera picture without any graphics or camera interface.\nThe camera is bolted in the upper far corner of a spacious classroom, 2.7 metres above the floor, pointing STEEPLY DOWNWARD at 65 degrees toward the floor, an almost overhead bird's-eye angle from the corner. This is emphatically a high top-down view, seeing the CROWNS of heads, tops of shoulders, full horizontal desktop surfaces, open book pages, and much more floor than walls. The distant walls only occupy a narrow strip at the top. The camera cannot move at all. No pan, tilt, zoom, shake or cuts. Deep focus, flat neutral daylight, ordinary natural colors, ordinary modern school furniture.\nThe classroom floor occupies most of the frame. Six small individual wooden desks are widely spaced in two rows. Exactly TWO fictional school-age children occupy two desks far apart in the middle distance, one left and one right. All the other chairs and desks are empty. Both children are distant and small: each seated child occupies about 15 percent of the whole image height, surrounded by lots of floor and empty desks. We see mostly the tops of their heads and desks, never a front-facing portrait. The left child wears a blue top, the right child wears an orange top. Ordinary modest clothes. Each child has a clearly visible open physical hardcover paper book laid flat on the desk, hands next to the book. Both are quietly reading throughout these eight seconds, heads lowered toward the pages. Around second five, the blue child naturally lifts and turns exactly one paper page then continues reading. The orange child keeps the book open and continues reading. Only slow small natural movements. No one enters or exits. Keep all the desks and children in the same positions, with the entire rectangular picture completely steady. Quiet ordinary room ambience, no speech or music. The people and school are invented for a labeled prototype, not real classroom footage.",
+    "status": "downloaded",
+    "requested_duration_seconds": 8,
+    "filtered_count": null,
+    "filter_reasons": null,
+    "completed_at": "2026-10-08T09:54:18.758758+00:00",
+    "bytes": 1106191,
+    "actual": {
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 8.0,
+      "fps": "24/1",
+      "codec": "h264"
+    },
+    "visual_review": {
+      "observations": [
+        "Clean rectangular image with no dark vignette or camera text in reviewed frames.",
+        "View shows tops of heads and broad desktop surfaces and is steeper than the first delivered clip.",
+        "Two full foreground readers; blue reader turns a paper page.",
+        "A third child is partially cropped at the far edge."
+      ],
+      "limitations": [
+        "Camera corner placement and precise physical 2.7m height cannot be established from generated pixels.",
+        "The composition is more overhead but is still oblique and more centered than the exact corner-camera request.",
+        "Foreground readers are smaller than the first clip but larger than the 15%-height prompt requested."
+      ]
+    }
+  },
+  "extension": {
+    "prompt": "Continue the same uninterrupted raw fixed-camera classroom recording for seven more seconds. Preserve EXACTLY the same very high ceiling-corner, steeply downward almost overhead view, the same entire rectangular evenly illuminated image without dark corners, and the same two fully visible children at the near desks plus the partially visible child behind them. Preserve all desk positions. The background child stays quietly reading and does not move location. Camera remains completely motionless. Blue-top child on the left keeps looking down at the open physical book and quietly reading throughout. The fully visible orange-top child at the foreground right desk reads for the next two seconds, then clearly closes the physical hardcover book with both hands, leaves it shut flat on the desk, sits upright and looks toward the far wall, away from the closed book, remaining looking away for the rest of the clip. The book stays closed. Natural slow movement in real time. No new people, no change of room, no cuts, no closeup, no camera motion, no graphics, no text or icons. Clean normal rectangular raw video, stable lighting to every corner. The same fictional classroom demonstration continues.",
+    "status": "downloaded",
+    "created_at": "2026-10-08T09:55:00.825278+00:00",
+    "expected_added_seconds": 7,
+    "filtered_count": null,
+    "filter_reasons": null,
+    "completed_at": "2026-10-08T09:57:24.033293+00:00",
+    "bytes": 2360454,
+    "actual": {
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 15.0,
+      "fps": "24/1",
+      "codec": "h264"
+    },
+    "visual_review": {
+      "method": "Review of contact sheet at 0.3, 7.8, 9.5, 11.0, 13.0 and 14.8 seconds, plus full ffmpeg decode validation.",
+      "observations": [
+        "Rectangular full image with normal bright corners; no visible HUD or text in reviewed frames.",
+        "Higher downward view shows top of heads and desks.",
+        "Two foreground children, plus one partially cropped background child.",
+        "Blue child turns a page in the base segment.",
+        "Orange foreground child manipulates book around 9.5 seconds, then sits upright and looks away toward the right through the final seconds.",
+        "Camera and classroom composition remain substantially fixed across the base/extension boundary."
+      ],
+      "limitations": [
+        "The orange book appears open again after the closing-like motion; do not label it continuously closed. Looking away, rather than book closure, is the observable stop cue.",
+        "Camera view remains oblique and centered rather than convincingly in a far corner. Exact 2.7m mounting height cannot be verified from synthetic pixels.",
+        "Subjects remain larger than the 15%-height prompt requested.",
+        "The background reader is cropped; it should not be silently counted as fully tracked.",
+        "Synthetic generation is a demonstration asset, not evidence of accuracy on real classroom video."
+      ]
+    }
+  },
+  "status": "complete",
+  "bytes": 3079817,
+  "sha256": "824c1e20c39b9ac8eeb13925dd655d17f73abf3439d40f46852a9b6837af2a4f",
+  "packaging": "H.264 re-encode at original 1280x720/24fps to ensure clean seeking across native extension boundary; audio removed; synthetic metadata; no looping, speed change, or cropping.",
+  "final_actual": {
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 15.0,
+    "frames": 360,
+    "fps": 24,
+    "video_codec": "h264"
+  }
+}

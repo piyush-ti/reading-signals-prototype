@@ -1,0 +1,86 @@
+{
+  "summary": "High overhead view of a group in a library setting around wooden desks, with participants looking at open physical books throughout the sequence.",
+  "people": [
+    {
+      "id": "reader_a",
+      "label": "Reader A",
+      "description": "Person with long blonde hair in a burgundy and red sweater with white sleeve stripes, seated at the bottom desk.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 8.84,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Maintains continuous head orientation toward an open book on the table, flipping pages around 5 seconds."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 5.25,
+          "confidence": "medium",
+          "reason": "Lifts and turns a page over to the left side of the open book."
+        }
+      ]
+    },
+    {
+      "id": "reader_b",
+      "label": "Reader B",
+      "description": "Person wearing a light cream top, seated at the upper right side of the desk arrangement.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 8.84,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Seated looking continuously down at an open book positioned on the desk in front of them."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_c",
+      "label": "Reader C",
+      "description": "Person in a white collared shirt standing at the upper left desk.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 8.84,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Leaning over the desk while maintaining sustained downward gaze at the large open book."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_d",
+      "label": "Reader D",
+      "description": "Person in a dark striped shirt seated at the middle left desk.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 8.84,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Seated directly facing a large open illustrated book, continuously looking down at the open pages."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_e",
+      "label": "Reader E",
+      "description": "Person wearing a mustard yellow sweater seated at the middle right desk.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 8.84,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Seated with hands near an open book, maintaining steady head alignment towards the pages."
+        }
+      ],
+      "page_turns": []
+    }
+  ]
+}

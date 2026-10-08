@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#153c34">
+<title>Reading Lab · Marauder’s Map</title><meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23153c34'/%3E%3Cpath d='M6 9q5-2 10 1q5-3 10-1v15q-5-2-10 1q-5-3-10-1zM16 10v15' fill='none' stroke='%23c9e9ad' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;--ink:#173c34;--muted:#637168;--bg:#f3f5ef;--line:#dbe1d7;--reader:#68efb0}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,input,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #dfad42;outline-offset:3px}.wrap{max-width:1400px;padding:0 28px;margin:auto}header{border-bottom:1px solid var(--line);background:#fff}header .wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:650;font-size:18px;letter-spacing:-.45px}.brand span{color:var(--muted);font-weight:400}.tag{font-size:12px;letter-spacing:.4px;background:#eaf0e2;border:1px solid #dbe5d0;padding:4px 10px;border-radius:30px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:20px 0 14px}.samples{display:flex;gap:8px;flex-wrap:wrap}.sample{border:1px solid var(--line);padding:8px 14px;border-radius:8px;background:transparent;color:var(--muted);font-size:14px}.sample.active{background:var(--ink);border-color:var(--ink);color:#fff}.toggles{display:flex;gap:14px}.toggles label{font-size:14px;display:flex;align-items:center;gap:5px;cursor:pointer}.toggles input{accent-color:var(--ink);width:16px;height:16px}.viewer{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.screen{position:relative;aspect-ratio:16/9;background:#11271e;overflow:hidden}.screen video{width:100%;height:100%;display:block;object-fit:contain}.overlay{position:absolute;inset:0;pointer-events:none}.bbox{position:absolute;border:2px solid var(--reader);border-radius:3px;box-shadow:0 0 0 1px #0002}.boxlabel{position:absolute;left:-2px;top:-23px;background:var(--reader);padding:1px 6px;color:#092720;font-size:12px;line-height:20px;white-space:nowrap;font-weight:700;border-radius:3px 3px 0 0}.bbox.book{border-style:dashed;border-color:#ffdc79}.book .boxlabel{background:#ffdc79;top:auto;bottom:-22px;border-radius:0 0 3px 3px;color:#46340b}.videochip{position:absolute;top:14px;left:14px;color:#fff;background:#102d27d9;border:1px solid #ffffff35;border-radius:5px;font-size:12px;padding:4px 9px}.controls{display:flex;align-items:center;gap:14px;padding:12px 16px}.iconbutton{border:0;border-radius:8px;background:var(--ink);color:white;width:39px;height:37px;flex-shrink:0;display:grid;place-items:center}.iconbutton.secondary{background:#edf1e7;color:var(--ink)}.iconbutton svg{width:18px;height:18px}.time{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}.scrub{accent-color:var(--ink);flex:1;min-width:24px}.speed{font-size:13px;padding:5px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink)}.cards{display:flex;flex-direction:column;gap:10px;margin:20px 0}.card{display:grid;grid-template-columns:minmax(170px,1.4fr) minmax(120px,1fr) minmax(130px,1fr) minmax(110px,.8fr);align-items:center;gap:25px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px}.identity{display:flex;align-items:center;gap:12px}.avatar{height:38px;width:38px;border-radius:10px;background:var(--reader);color:#12382d;font-weight:700;display:grid;place-items:center;flex-shrink:0}h2{font-size:16px;font-weight:650;margin:0}.clothing{font-size:13px;color:var(--muted);margin-top:1px}.state{font-size:13px;display:inline-flex;align-items:center;gap:6px;color:#3b6748}.state:before{content:'';width:7px;height:7px;background:#699d75;border-radius:50%;flex-shrink:0}.state.other_activity{color:#687479}.state.other_activity:before{background:#8e9da3}.state.unclear{color:#977626}.state.unclear:before{background:#cbad62}.stat label{font-size:12px;display:block;color:var(--muted)}.timer{font-size:29px;font-weight:550;letter-spacing:-.7px;font-variant-numeric:tabular-nums;line-height:1.25}.timer small{font-weight:400;font-size:14px;color:var(--muted);margin-left:3px;letter-spacing:0}.pages{font-size:23px;font-weight:550;font-variant-numeric:tabular-nums;line-height:1.55}.foot{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted);padding:0 1px 24px}.foot a{color:inherit;text-underline-offset:3px}.screenerror{display:none;position:absolute;inset:0;background:#12362aef;color:white;place-items:center;padding:30px;text-align:center}.error{display:none;padding:12px;margin-top:15px;background:#fff0da;color:#866024;border-radius:8px;font-size:14px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:720px){.wrap{padding:0 14px}header .wrap{min-height:62px}.brand{font-size:16px}.brand span{display:none}.toolbar{align-items:flex-start;margin:15px 0 12px;gap:10px}.samples{gap:6px}.sample{padding:7px 9px;font-size:12px}.toggles{gap:8px;padding-top:7px}.toggles label{font-size:12px}.toggles input{width:14px;height:14px}.controls{gap:9px;padding:10px}.time{font-size:12px}.speed{font-size:12px}.iconbutton{height:32px;width:32px}.videochip{font-size:10px;top:9px;left:9px}.boxlabel{font-size:10px;line-height:14px;top:-18px;padding:1px 4px}.book .boxlabel{bottom:-18px}.bbox{border-width:1.5px}.card{grid-template-columns:1fr 1fr;gap:12px 18px;padding:15px 17px}.identity{grid-column:1}.state{grid-column:2;justify-self:end}.stat{padding-top:7px;border-top:1px solid #edf0e8}.stat:last-child{text-align:right}.cards{margin-top:14px}.timer{font-size:27px}.foot{font-size:11px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Marauder’s Map <span>/ Reading Lab</span></div></div></header>
+<main class="wrap">
+<div id="error" class="error" role="alert"></div>
+<div class="toolbar"><div id="samples" class="samples" aria-label="Choose video"></div><div class="toggles"><label><input id="peopleToggle" type="checkbox" checked>People</label><label><input id="booksToggle" type="checkbox" checked>Books</label></div></div>
+<section class="viewer" aria-label="Reading video">
+<div id="screen" class="screen"><video id="video" playsinline preload="auto" muted aria-label="Reading observation video"></video><div id="overlay" class="overlay" aria-hidden="true"></div><div id="videoError" class="screenerror">Video unavailable. Please reload.</div></div>
+<div class="controls"><button id="play" class="iconbutton" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7z"/></svg></button><button id="restart" class="iconbutton secondary" aria-label="Restart video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9a8 8 0 1 1-1 6M5 3v6h6"/></svg></button><span id="time" class="time">0:00 / 0:00</span><label class="sr-only" for="scrub">Video position</label><input id="scrub" class="scrub" type="range" min="0" max="1" step="0.01" value="0"><label class="sr-only" for="speed">Playback speed</label><select id="speed" class="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><button id="fullscreen" class="iconbutton secondary" aria-label="Fullscreen video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></button></div>
+</section>
+<section id="cards" class="cards" aria-label="Reader observations"></section>
+<footer class="foot"><span>AI estimates · Recorded analysis</span><a id="rawLink" href="#" target="_blank" rel="noopener">Analysis data</a></footer>
+</main>
+<script src="demo-data.js"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id), video=$('video');
+const colors=['#68efb0','#83baff','#efb0fd','#ffb582','#a9e377'];
+const names={likely_reading:'Likely reading',other_activity:'Other activity',unclear:'Unclear'};
+let current=null,animation=null;
+const mm=t=>{t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+const seconds=t=>(Math.round(t*10)/10).toFixed(1);
+const readingAt=(p,t)=>p.segments.reduce((n,s)=>n+(s.state==='likely_reading'?Math.max(0,Math.min(t,s.end)-s.start):0),0);
+const segmentAt=(p,t)=>p.segments.find(s=>t>=s.start&&t<s.end)||p.segments[p.segments.length-1];
+function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+function fail(text){$('error').textContent=text;$('error').style.display='block'}
+function buildCards(){
+ $('cards').replaceChildren();$('overlay').replaceChildren();
+ current.analysis.people.forEach((p,i)=>{
+  const card=el('article','card');card.id='card-'+i;card.style.setProperty('--reader',colors[i%colors.length]);
+  const identity=el('div','identity'),avatar=el('span','avatar',String.fromCharCode(65+i)),name=el('div');
+  name.append(el('h2','',p.label),el('div','clothing',current.descriptions?.[p.id]||''));identity.append(avatar,name);
+  const state=el('div','state');state.id='state-'+i;
+  const reading=el('div','stat');reading.append(el('label','','Reading time'));const timer=el('div','timer');timer.id='timer-'+i;reading.append(timer);
+  const turning=el('div','stat');turning.append(el('label','','Page turns · est.'));const pages=el('div','pages','0');pages.id='turns-'+i;turning.append(pages);
+  card.append(identity,state,reading,turning);$('cards').append(card);
+  for(const kind of ['person','book']){const box=el('div','bbox '+(kind==='book'?'book':''));box.id=`box-${i}-${kind}`;box.style.setProperty('--reader',colors[i%colors.length]);box.append(el('span','boxlabel',kind==='person'?p.label:'Book '+String.fromCharCode(65+i)));$('overlay').append(box)}
+ });
+}
+function boxesAt(id,t){
+ const frames=current.analysis.keyframes||[];if(!frames.length)return null;
+ let a=frames[0],b=a;
+ for(let i=0;i<frames.length-1;i++){if(t>=frames[i].time&&t<frames[i+1].time){a=frames[i];b=frames[i+1];break}}
+ if(t>=frames[frames.length-1].time)a=b=frames[frames.length-1];
+ const pa=a.people.find(p=>p.id===id),pb=b.people.find(p=>p.id===id);if(!pa)return null;
+ const f=b.time>a.time?Math.max(0,Math.min(1,(t-a.time)/(b.time-a.time))):0,out={};
+ for(const kind of ['person','book']){const key=kind+'_box',x=pa[key],y=pb?.[key];if(kind==='book'&&!pa.book_visible){out[key]=null;continue}out[key]=x?.length===4?(y?.length===4?x.map((v,i)=>v+(y[i]-v)*f):x):null}return out;
+}
+function paint(){
+ if(!current)return;const t=Math.min(video.currentTime||0,current.analysis.duration);
+ $('time').textContent=mm(t)+' / '+mm(current.analysis.duration);$('scrub').value=t;
+ current.analysis.people.forEach((p,i)=>{
+  const s=segmentAt(p,t),state=$('state-'+i);state.className='state '+s.state;state.textContent=names[s.state];state.title=s.reason;
+  $('timer-'+i).replaceChildren(document.createTextNode(seconds(readingAt(p,t))),el('small','','s'));
+  $('turns-'+i).textContent=String((p.page_turns||[]).filter(e=>e.time<=t).length);
+  const boxes=boxesAt(p.id,t);
+  for(const kind of ['person','book']){const box=$(`box-${i}-${kind}`),b=boxes?.[kind+'_box'],enabled=$(kind==='person'?'peopleToggle':'booksToggle').checked;box.style.display=b&&enabled?'block':'none';if(b){box.style.top=b[0]/10+'%';box.style.left=b[1]/10+'%';box.style.height=(b[2]-b[0])/10+'%';box.style.width=(b[3]-b[1])/10+'%'}}
+ });
+}
+function seek(t){if(!current)return;video.currentTime=Math.min(t,current.analysis.duration);paint()}
+function tick(){paint();if(!video.paused&&!video.ended)animation=requestAnimationFrame(tick)}
+function playButton(){const playing=!video.paused&&!video.ended;$('play').setAttribute('aria-label',playing?'Pause video':'Play video');$('play').innerHTML=playing?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>':'<svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7z"/></svg>'}
+function load(index){
+ video.pause();if(animation)cancelAnimationFrame(animation);current=window.READING_DEMO.clips[index];
+ $('screen').style.aspectRatio=`${current.analysis.width} / ${current.analysis.height}`;
+ $('scrub').max=current.analysis.duration;video.src=current.src;video.poster=current.poster||'';video.playbackRate=Number($('speed').value);$('videoError').style.display='none';$('rawLink').href=current.resultUrl;
+ buildCards();document.querySelectorAll('.sample').forEach((s,i)=>{s.classList.toggle('active',i===index);s.setAttribute('aria-pressed',String(i===index))});paint();playButton();
+}
+$('play').onclick=async()=>{if(video.paused||video.ended){if(video.ended)seek(0);try{await video.play()}catch{fail('Could not start playback. Please try again.')}}else video.pause()};
+$('restart').onclick=()=>seek(0);$('scrub').oninput=e=>seek(Number(e.target.value));$('speed').onchange=e=>video.playbackRate=Number(e.target.value);
+$('peopleToggle').onchange=paint;$('booksToggle').onchange=paint;
+$('fullscreen').onclick=()=>{if($('screen').requestFullscreen)$('screen').requestFullscreen().catch(()=>fail('Fullscreen is unavailable in this browser.'));else if(video.webkitEnterFullscreen)video.webkitEnterFullscreen()};
+video.addEventListener('play',()=>{playButton();if(animation)cancelAnimationFrame(animation);tick()});video.addEventListener('pause',()=>{playButton();if(animation)cancelAnimationFrame(animation);paint()});video.addEventListener('ended',()=>{playButton();paint()});video.addEventListener('seeked',paint);video.addEventListener('loadedmetadata',paint);video.addEventListener('error',()=>$('videoError').style.display='grid');
+if(!window.READING_DEMO?.clips?.length){fail('Analysis unavailable. Please reload.');return}
+window.READING_DEMO.clips.forEach((c,i)=>{const b=el('button','sample',(c.generated?'Generated CCTV':'Overhead footage')+' · '+seconds(c.analysis.duration)+'s');b.onclick=()=>load(i);$('samples').append(b)});load(0);
+})();
+</script>
+</body></html>
