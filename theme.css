@@ -1,0 +1,16 @@
+/* Adapted from Marauder's Map frontend/design-system/{tokens,primitives}.css. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/inter-latin.woff2') format('woff2')}
+:root{--ink:#18202a;--muted:#6a7580;--bg:#e9eef0;--line:#e6eaef;--brand:#2563eb;--reader:#2563eb}
+body{font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(720px 620px at 14% 12%,rgba(56,189,248,.16),transparent 60%),radial-gradient(820px 700px at 88% 8%,rgba(96,165,250,.14),transparent 60%),linear-gradient(160deg,#eef3f6,#dfe7ec);background-attachment:fixed;min-height:100vh}
+header{background:rgba(255,255,255,.55);backdrop-filter:blur(12px) saturate(180%);border-bottom:1px solid rgba(96,165,250,.12)}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:-.3px;font-weight:600}.brand svg{color:var(--brand);flex-shrink:0}.brand span{font-size:14px}
+.mvp{font-size:11px;letter-spacing:.7px;font-weight:600;color:var(--brand);border-left:1px solid #d7e0eb;padding-left:12px;margin-left:2px}
+.sample{background:rgba(255,255,255,.8);color:var(--muted);border-color:#e0e5ec;transition:background .15s}.sample:hover{background:#fff}.sample.active{background:linear-gradient(135deg,#3b82f6,#2563eb);border-color:#2563eb;color:#fff;box-shadow:0 3px 8px rgba(37,99,235,.13)}
+.viewer{border-color:rgba(96,165,250,.18);box-shadow:0 8px 24px rgba(24,32,42,.05);border-radius:16px}.card{border-color:var(--line);box-shadow:0 4px 14px rgba(24,32,42,.035);border-radius:14px}
+.iconbutton{background:linear-gradient(135deg,#3b82f6,#2563eb)}.iconbutton:hover{background:#1d4ed8}.iconbutton.secondary{background:#eef1f4;color:#6a7580}.iconbutton.secondary:hover{background:#e2e7ec}
+.toggles input,.scrub{accent-color:var(--brand)}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline-color:var(--brand)}
+.avatar{background:color-mix(in srgb,var(--reader) 12%,white);color:var(--reader)}.boxlabel{color:#fff}.bbox.book{border-color:#fbbf24}.book .boxlabel{background:#fbbf24;color:#422c04}
+.state{color:#16a34a}.state:before{background:#16a34a}.state.other_activity{color:#6a7580}.state.other_activity:before{background:#8a95a0}.state.unclear{color:#a16207}.state.unclear:before{background:#e0a020}
+.stat{border-color:#eef1f4}.screen{background:#18202a}.error{background:#fffbeb;color:#a16207}.cards{margin-bottom:28px}
+@media(max-width:720px){.brand{font-size:14px;gap:8px}.brand span{display:inline;font-size:12px}.mvp{font-size:10px;padding-left:9px}.brand svg{width:18px}}
+@media(max-width:360px){.brand span{display:none}}
