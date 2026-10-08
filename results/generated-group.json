@@ -1,5 +1,5 @@
 {
-  "summary": "Six readers are observed seated around a large table in a library setting, each with an open book. Most remain focused on reading, while two individuals look up or stand up during the observation window. Page turns are observed for Reader A and Reader B.",
+  "summary": "Six readers are visible with open books. Five maintain observable book-facing reading posture throughout. The orange-top reader (display Reader F) looks away and stands during the final seconds. Page-turn candidates are recorded for display Readers A and B.",
   "people": [
     {
       "id": "reader_a",
@@ -1778,7 +1778,9 @@
           "confidence": "high",
           "reason": "Head remains directed toward the open book throughout, including after sitting more upright during the final five seconds. Visually reviewed correction."
         }
-      ]
+      ],
+      "original_summary": "Six readers are observed seated around a large table in a library setting, each with an open book. Most remain focused on reading, while two individuals look up or stand up during the observation window. Page turns are observed for Reader A and Reader B.",
+      "corrected_summary": "Six readers are visible with open books. Five maintain observable book-facing reading posture throughout. The orange-top reader (display Reader F) looks away and stands during the final seconds. Page-turn candidates are recorded for display Readers A and B."
     }
   ]
 }
