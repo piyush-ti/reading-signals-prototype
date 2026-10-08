@@ -61,10 +61,10 @@ function paint(){
  $('time').textContent=mm(t)+' / '+mm(current.analysis.duration);$('scrub').value=t;
  current.analysis.people.forEach((p,i)=>{
   const s=segmentAt(p,t),state=$('state-'+i);state.className='state '+s.state;state.textContent=names[s.state];state.title=s.reason;
-  $('timer-'+i).replaceChildren(document.createTextNode(seconds(readingAt(p,t))),el('small','','s'));
+  if(p.segments.every(s=>s.state==='unclear'))$('timer-'+i).replaceChildren(document.createTextNode('—'));else $('timer-'+i).replaceChildren(document.createTextNode(seconds(readingAt(p,t))),el('small','','s'));
   $('turns-'+i).textContent=String((p.page_turns||[]).filter(e=>e.time<=t).length);
   const boxes=boxesAt(p.id,t);
-  for(const kind of ['person','book']){const box=$(`box-${i}-${kind}`),b=boxes?.[kind+'_box'],enabled=$(kind==='person'?'peopleToggle':'booksToggle').checked;box.style.display=b&&enabled?'block':'none';if(b){box.style.top=b[0]/10+'%';box.style.left=b[1]/10+'%';box.style.height=(b[2]-b[0])/10+'%';box.style.width=(b[3]-b[1])/10+'%'}}
+  for(const kind of ['person','book']){const box=$(`box-${i}-${kind}`),b=boxes?.[kind+'_box'],enabled=$(kind==='person'?'peopleToggle':'booksToggle').checked;box.style.display=b&&enabled?'block':'none';if(b){box.style.top=b[0]/10+'%';box.style.left=b[1]/10+'%';box.style.height=(b[2]-b[0])/10+'%';box.style.width=(b[3]-b[1])/10+'%';if(kind==='person')box.firstElementChild.style.top=b[0]<45?'0px':''}}
  });
 }
 function seek(t){if(!current)return;video.currentTime=Math.min(t,current.analysis.duration);paint()}

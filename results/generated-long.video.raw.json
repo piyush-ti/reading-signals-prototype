@@ -1,52 +1,73 @@
 {
-  "summary": "High-angle classroom scene monitoring two foreground students reading books. Reader A continuously stays focused on his book, turning a page around 4.75 seconds. Reader B reads her book while following along until 11 seconds (turning a page around 9.75 seconds), after which she turns her head away from the book.",
+  "summary": "Three students sit at individual desks with open books. Reader A remains steadily oriented toward his book throughout the video. Reader B reads and turns a page before looking away to her right. Reader C is partially cropped at the top edge of the frame, making gaze and reading state difficult to verify visually.",
   "people": [
     {
       "id": "reader_a",
       "label": "Reader A",
-      "description": "person wearing blue shirt seated at the left foreground desk",
+      "description": "Boy in a blue sweater seated at the left foreground desk with an open book.",
       "segments": [
         {
           "start": 0,
           "end": 15,
           "state": "likely_reading",
           "confidence": "high",
-          "reason": "Maintains a steady downward head orientation looking at the open book on his desk throughout."
+          "reason": "Maintains a continuous downward head orientation toward his open book and turns a page."
         }
       ],
       "page_turns": [
         {
-          "time": 4.75,
+          "time": 4.5,
           "confidence": "high",
-          "reason": "Lifts the right page and turns it over to rest on the left side."
+          "reason": "Lifts the page on the left side, flips it across, and lets it settle on the right side."
         }
       ]
     },
     {
       "id": "reader_b",
       "label": "Reader B",
-      "description": "person wearing orange shirt seated at the right foreground desk",
+      "description": "Girl in an orange long-sleeve top seated at the right foreground desk with an open book.",
       "segments": [
         {
           "start": 0,
           "end": 11,
           "state": "likely_reading",
           "confidence": "high",
-          "reason": "Head is oriented towards the open book on her desk while reading."
+          "reason": "Looks down at the open book, follows text with her hand, and turns a page."
         },
         {
           "start": 11,
           "end": 15,
           "state": "other_activity",
           "confidence": "high",
-          "reason": "Sits back in her chair and looks away from the book towards the side of the room."
+          "reason": "Sits back and turns her head away from the book, looking toward her right."
         }
       ],
       "page_turns": [
         {
-          "time": 9.75,
+          "time": 9.5,
           "confidence": "high",
-          "reason": "Lifts a page from the right side and flips it to the left side."
+          "reason": "Lifts the right page with her right hand and turns it over to the left side."
+        }
+      ]
+    },
+    {
+      "id": "reader_c",
+      "label": "Reader C",
+      "description": "Person in an orange/red top seated at the background center desk, partially cut off by the upper edge of the frame.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15,
+          "state": "unclear",
+          "confidence": "medium",
+          "reason": "Head and upper face are cut off by the top frame border, preventing clear assessment of head orientation and eye gaze."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 13.5,
+          "confidence": "medium",
+          "reason": "Visible movement of lifting and turning a sheet from the open book on the desk."
         }
       ]
     }

@@ -30,11 +30,12 @@ clips = [clip("overhead", title="Overhead reading observation",
     credit="Getty Images asset 2194897651. Supplied for this demonstration under the owner’s confirmed license. Watermark retained.")]
 if (ROOT / "results/generated-long.json").exists():
     clips.append(clip("generated-long", title="Ceiling-camera classroom",
-        subtitle="Generated footage · 15 seconds · 2 selected readers",
+        subtitle="Generated footage · 15 seconds · 3 readers",
         shortLabel="Generated · ceiling-corner view", generated=True,
-        descriptions={"reader_a": "Blue shirt", "reader_b": "Orange shirt"},
+        descriptions={"reader_a": "Blue shirt", "reader_b": "Orange shirt", "reader_c": "Red top · back desk"},
         note="Synthetic classroom with a fixed ceiling-corner viewpoint. Generated footage demonstrates the interaction; it does not validate accuracy on real children or cameras.",
         credit="Synthetic video generated with Google Veo 3.1 Fast. Requested camera mounting height: 2.7 m; physical height cannot be measured from generated pixels.",
         sourceUrl="https://ai.google.dev/gemini-api/docs/veo"))
+clips.sort(key=lambda c: not c["generated"])
 (ROOT / "demo-data.js").write_text("window.READING_DEMO = " + json.dumps({"clips": clips}, ensure_ascii=False, separators=(",", ":")) + ";\n")
 print("Packaged", len(clips), "clips with verified video hashes")
