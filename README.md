@@ -2,7 +2,11 @@
 
 Standalone Marauder’s Map physical-book reading prototype. Play a clip to see
 person and book bounding boxes, estimated reading durations and candidate page
-turns. The player fills the page width; reader cards are stacked below it.
+turns. The player fills the page width; reader cards are stacked below it. The default
+15-second generated overhead clip includes all six visible students, followed by
+the 15-second generated CCTV clip with all three visible people, then the supplied
+Getty clip with five. Overhead display labels run left to right at the first
+frame and remain stable during playback. Model IDs in the saved JSON stay intact.
 
 ## Run
 
@@ -47,7 +51,9 @@ covered by an open-source code license.
 The generated classroom clip is clearly identified in its video selector.
 It is a continuous 15-second Veo 3.1 Fast generation with extension, not a loop
 or slowed clip. Requested camera height is a prompt parameter, not a measurable
-camera calibration. Generation provenance is in `results/generation.json`.
+camera calibration. Generation provenance is in `results/generation.json` and
+`results/generation-group.json`. The second scene has six students around a shared
+table. All generated clips are labeled in their selectors.
 
 ## Reproduce
 
@@ -59,3 +65,9 @@ chosen media to the Gemini API; only authorized demo media should be used.
 
 `--reuse-video` is intended only for retrying localization with the exact same
 source and targets after a successful video-analysis request.
+
+## Design
+
+The MVP uses the existing Marauder’s Map frontend palette: primary blue
+`#2563eb`, app background `#e9eef0`, white cards, text `#18202a`, and Inter.
+The font is self-hosted with its SIL Open Font License.

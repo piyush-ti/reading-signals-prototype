@@ -1,0 +1,126 @@
+{
+  "summary": "Six readers are observed seated around a large table in a library setting, each with an open book. Most remain focused on reading, while two individuals look up or stand up during the observation window. Page turns are observed for Reader A and Reader B.",
+  "people": [
+    {
+      "id": "reader_a",
+      "label": "Reader A",
+      "description": "Seated at the near-left end of the table wearing a blue hoodie.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15.0,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Maintains sustained gaze toward the open book on the table and turns pages."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 4.5,
+          "confidence": "high",
+          "reason": "Lifts a page with his right hand, turns it across the spine, and lays it flat on the left side."
+        },
+        {
+          "time": 11.75,
+          "confidence": "high",
+          "reason": "Lifts a page from the right side and flips it over to the left side."
+        }
+      ]
+    },
+    {
+      "id": "reader_b",
+      "label": "Reader B",
+      "description": "Seated along the far-left side of the table wearing a burgundy cardigan over a white top.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15.0,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Keeps head bowed toward the open book with continuous line-following gaze."
+        }
+      ],
+      "page_turns": [
+        {
+          "time": 11.75,
+          "confidence": "high",
+          "reason": "Lifts a page from the right sheet and turns it over to the left side."
+        }
+      ]
+    },
+    {
+      "id": "reader_c",
+      "label": "Reader C",
+      "description": "Seated at the far-middle side of the table wearing a cream sweater and glasses.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15.0,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Remains focused on the open book in front of her throughout the entire duration."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_d",
+      "label": "Reader D",
+      "description": "Seated at the far-right side of the top row wearing a pale sweater with long dark hair.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 10,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Gaze is directed downwards toward the open book on the desk."
+        },
+        {
+          "start": 10,
+          "end": 15.0,
+          "state": "other_activity",
+          "confidence": "high",
+          "reason": "Sits up straight and looks up away from the book toward the room."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_e",
+      "label": "Reader E",
+      "description": "Seated along the right side of the table wearing a bright orange sweater.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 9,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Head orientation and gaze are directed at the open book on the table."
+        },
+        {
+          "start": 9,
+          "end": 15.0,
+          "state": "other_activity",
+          "confidence": "high",
+          "reason": "Looks up, stands up from her chair, and looks away from the book."
+        }
+      ],
+      "page_turns": []
+    },
+    {
+      "id": "reader_f",
+      "label": "Reader F",
+      "description": "Seated closest to the bottom-center of the frame wearing a gray sweater with long dark hair.",
+      "segments": [
+        {
+          "start": 0,
+          "end": 15.0,
+          "state": "likely_reading",
+          "confidence": "high",
+          "reason": "Sustained downward head angle toward the open book directly in front of her."
+        }
+      ],
+      "page_turns": []
+    }
+  ]
+}

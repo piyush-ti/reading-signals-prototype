@@ -1,0 +1,102 @@
+{
+  "synthetic": true,
+  "purpose": "Fictional group demonstration; not real classroom evidence or reading-model validation.",
+  "reference_use": "A local Getty-preview frame was visually inspected for high diagonal overhead camera geometry only. No reference pixels or real-person likenesses were sent to the generation service.",
+  "provider": "Google Gemini API",
+  "model": "veo-3.1-fast-generate-preview",
+  "created_at": "2026-10-08T10:05:05.475913+00:00",
+  "requested_total_duration_seconds": 15,
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "method": "Fresh 8s text-to-video plus native 7s video extension, with no loops or speed changes.",
+  "documentation": "https://ai.google.dev/gemini-api/docs/veo#extending_veo_videos",
+  "pricing": {
+    "per_generated_second_usd": 0.1,
+    "estimated_total_usd": 1.5,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+    "note": "Estimate, not an invoice; extension billing not independently checked."
+  },
+  "negative_prompt": "fisheye, circular image, vignette, dark corners, black corners, border, mask, camera HUD, icons, logo, watermark, text overlays, timestamp, frontal faces, front view, side view, low angle, eye-level camera, portrait, closeup, large people, cropped people, cropped heads, missing student, extra people, fewer than five people, more than five people, cinematic framing, shallow focus, camera movement, pan, tilt, zoom, shaking, cut, scene change",
+  "base": {
+    "prompt": "Entirely synthetic photorealistic raw recording for a clearly labeled fictional school-library prototype. SINGLE FIXED HIGH DIAGONAL OVERHEAD SHOT, looking down from a camera attached in the ceiling CORNER 2.7 metres above the floor. The optical axis points steeply DOWN at 70 degrees toward a long reading table below. Strong top-down corner perspective: broad tabletop and floor dominate; crowns of heads and shoulders are visible, not frontal faces. The table runs DIAGONALLY from the lower-left toward the upper-right of the image, not parallel to the bottom edge. The camera sees the side and tops of students from above, like an ordinary high corner observation camera. Camera is completely immobile for the whole clip: no movement, zoom, tilt, pan, cuts or transitions.\nWide FULL RECTANGULAR 16:9 view with straight-line rectilinear perspective, normal evenly exposed corners and neutral daylight. All four corners contain visible classroom floor or furniture, with no dark lens shading, no vignette, no circle mask, no HUD, no graphics, no timestamps or text. Large bright school-library room, pale floor, a plain light-wood shared table, bookshelves set well back in the room. Deep focus and realistic ordinary room lighting.\nEXACTLY FIVE fictional school-age students in ordinary modest clothes are seated well apart around ONE shared long rectangular table. Two students sit along each long side, the fifth at the far short end. The whole table, every chair, and ALL FIVE complete seated students fit safely inside the frame with generous clear floor margins on every side; never crop any person. The students are small, distant figures occupying roughly 15 percent of picture height each. Clothing distinctly identifies each: BLUE, ORANGE, GREEN, BURGUNDY, and CREAM. Exactly one student in each color. Their appearances are original invented people, no real-person references. The orange student sits nearest the far-right side of the table. Each student has their OWN separate physical paper book opened flat directly in front of them, with empty tabletop space between the five books. Five children, five books, unambiguous individual book ownership.\nAll five quietly read their individual books for the whole eight seconds, with lowered heads toward the pages, hands near their own books, small natural movements. Around second five, the blue student slowly lifts and turns ONE physical paper page, lays it flat, then resumes looking down at the new page. All four other students keep reading throughout. No one stands, enters or exits. Quiet room ambience only, no speech or music. Preserve the high diagonal overhead composition and full-body safe margins throughout.",
+    "status": "downloaded",
+    "requested_duration_seconds": 8,
+    "filtered_count": null,
+    "filter_reasons": null,
+    "completed_at": "2026-10-08T10:07:02.664866+00:00",
+    "bytes": 1694177,
+    "actual": {
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 8.0,
+      "fps": "24/1",
+      "codec": "h264"
+    },
+    "visual_review": {
+      "observed_student_count": 6,
+      "observations": [
+        "High diagonal corner view over a shared table, improved geometry compared with previous clips.",
+        "Six student heads and corresponding books visible; blue student turns a page in the base segment.",
+        "No dark vignette, HUD or text in inspected frames."
+      ],
+      "prompt_deviations": [
+        "Six students rather than requested five.",
+        "No green top; two cream/light tops and one gray top instead.",
+        "Table and seated bodies extend to lower frame edge; heads and reading books remain visible.",
+        "An additional open book is visible at an empty seat."
+      ],
+      "continuation_decision": "Preserve the observed six students for continuity; user-facing count must reflect actual video."
+    }
+  },
+  "extension": {
+    "prompt": "Continue the SAME uninterrupted synthetic school-library video for seven more seconds, preserving EXACTLY the existing SIX students, their appearances and clothing, all the existing chairs, every individual book and the identical diagonal table layout. Preserve the existing steep downward ceiling-corner camera perspective without moving the camera at all. Existing six students: blue at lower left, burgundy along upper-left side, two light/cream-clothed students along the far side, orange at the right, and gray closest to the lower center. Keep all six heads and their individual books visible continuously. No one enters or disappears. No cuts, no zooms, no panning, no camera motion, no dark corners, no overlay text.\nFor the next two seconds all six students continue looking down at their own books. Then ONLY the ORANGE-shirt student at the RIGHT edge of the table slowly raises their head away from their own book, turns their head and upper shoulders to look into the room to their right, and stays looking away through the end. The orange student's physical paper book stays OPEN and flat in its same place on the table, hands rest away from the pages; do not close the book or change it. Every other student continues quietly reading their own open book throughout, with small natural hand movements. Blue may naturally touch the page but keeps reading. No one stands up or leaves the chair. Keep the same camera framing, tabletop geometry, constant neutral lighting and clean rectangular picture.",
+    "status": "downloaded",
+    "created_at": "2026-10-08T10:08:05.799148+00:00",
+    "expected_added_seconds": 7,
+    "filtered_count": null,
+    "filter_reasons": null,
+    "completed_at": "2026-10-08T10:09:42.413237+00:00",
+    "bytes": 3668273,
+    "actual": {
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 15.0,
+      "fps": "24/1",
+      "codec": "h264"
+    },
+    "visual_review": {
+      "method": "Six-frame visual contact sheet at 0.3, 7.8, 9.5, 11.0, 13.0 and 14.8 seconds; final video ffprobe inspection.",
+      "observations": [
+        "Six students persist at the same diagonal shared table.",
+        "Blue hoodie at near-left; burgundy cardigan far-left; cream sweater far-middle; off-white sweater long dark hair far-right/top; orange sweater at right; gray sweater long dark hair near-bottom-center.",
+        "Blue turns a page during the base segment.",
+        "Orange raises head, stands and looks away around 10-11 seconds and remains upright to the end.",
+        "Individual open books remain visible in front of all six students.",
+        "Normal rectangular image without dark corners, HUD or text; high diagonal corner perspective."
+      ],
+      "limitations": [
+        "Six generated students rather than the five requested.",
+        "No green top; several light-colored garments may make identity association harder.",
+        "Orange stands despite request to remain seated; do not describe the generated event as just a seated glance.",
+        "Other students show small posture and head changes; do not assume uninterrupted reading without VLM analysis.",
+        "Bodies/chairs nearest lower edge are partly cropped, although heads and books stay visible.",
+        "An additional open book is on the table at an empty seat.",
+        "Synthetic rendering cannot establish real-world reading accuracy or verify physical camera height."
+      ]
+    }
+  },
+  "status": "complete",
+  "bytes": 5089945,
+  "sha256": "ad8071a7086040814926e80ea392e2407555abe7b9f942b6848fc43e78c639da",
+  "packaging": "H.264 re-encode at original 1280x720/24fps for clean seeking; audio removed; synthetic metadata; no looping, speed change, or cropping.",
+  "observed_student_count": 6,
+  "requested_student_count": 5,
+  "final_actual": {
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 15.0,
+    "fps": 24,
+    "frames": 360,
+    "bytes": 5089945
+  }
+}

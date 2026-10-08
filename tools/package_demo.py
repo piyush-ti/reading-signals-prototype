@@ -37,13 +37,14 @@ if (ROOT / "results/generated-long.json").exists():
         credit="Synthetic video generated with Google Veo 3.1 Fast. Requested camera mounting height: 2.7 m; physical height cannot be measured from generated pixels.",
         sourceUrl="https://ai.google.dev/gemini-api/docs/veo"))
 if (ROOT / "results/generated-group.json").exists():
-    clips.append(clip("generated-group", title="Five-reader overhead table",
-        subtitle="Generated overhead footage · 15 seconds · 5 readers",
+    clips.append(clip("generated-group", title="Six-reader overhead table",
+        subtitle="Generated overhead footage · 15 seconds · 6 readers",
         menuLabel="Generated overhead", generated=True, orderByX=True,
-        descriptions={"reader_a": "Blue top", "reader_b": "Orange top", "reader_c": "Green top", "reader_d": "Burgundy top", "reader_e": "Cream top"},
-        note="Synthetic five-student scene. Generated footage is not an accuracy benchmark.",
+        descriptions={"reader_a": "Blue hoodie · left", "reader_b": "Burgundy · far left", "reader_c": "Cream top · far middle", "reader_d": "Off-white top · far right", "reader_e": "Orange top · right", "reader_f": "Gray top · near side"},
+        note="Synthetic six-student scene. Generated footage is not an accuracy benchmark.",
         credit="Synthetic video generated with Google Veo 3.1 Fast; continuous generated extension.",
         sourceUrl="https://ai.google.dev/gemini-api/docs/veo"))
-clips.sort(key=lambda c: not c["generated"])
+order={"assets/generated-group.mp4":0,"assets/generated-long.mp4":1,"assets/overhead.mp4":2}
+clips.sort(key=lambda c: order[c["src"]])
 (ROOT / "demo-data.js").write_text("window.READING_DEMO = " + json.dumps({"clips": clips}, ensure_ascii=False, separators=(",", ":")) + ";\n")
 print("Packaged", len(clips), "clips with verified video hashes")
