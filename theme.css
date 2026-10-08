@@ -14,3 +14,16 @@ header{background:rgba(255,255,255,.55);backdrop-filter:blur(12px) saturate(180%
 .stat{border-color:#eef1f4}.screen{background:#18202a}.error{background:#fffbeb;color:#a16207}.cards{margin-bottom:28px}
 @media(max-width:720px){.brand{font-size:14px;gap:8px}.brand span{display:inline;font-size:12px}.mvp{font-size:10px;padding-left:9px}.brand svg{width:18px}}
 @media(max-width:360px){.brand span{display:none}}
+
+/* Fullscreen includes the controls; letterboxing is accounted for by the overlay. */
+.viewer:fullscreen{display:flex;flex-direction:column;width:100%;height:100%;border:0;border-radius:0;background:#18202a;box-shadow:none}
+.viewer:fullscreen .screen{flex:1 1 0;min-height:0;width:100%;aspect-ratio:auto!important}
+.viewer:fullscreen .controls{flex:0 0 auto;background:#fff;padding:14px 22px;min-height:65px;width:100%;z-index:5}
+.viewer:-webkit-full-screen{display:flex;flex-direction:column;width:100%;height:100%;border:0;border-radius:0;background:#18202a}
+.viewer:-webkit-full-screen .screen{flex:1 1 0;min-height:0;width:100%;aspect-ratio:auto!important}
+.viewer:-webkit-full-screen .controls{flex:0 0 auto;background:#fff;padding:14px 22px;min-height:65px;width:100%;z-index:5}
+
+/* Keep a viewport-filling player when an embedded browser exits native fullscreen. */
+.viewer.expanded{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;width:100vw;height:100dvh;max-width:none;border:0;border-radius:0;background:#18202a;box-shadow:none}
+.viewer.expanded .screen{flex:1 1 0;min-height:0;width:100%;aspect-ratio:auto!important}
+.viewer.expanded .controls{flex:0 0 auto;background:#fff;padding:14px 22px;min-height:65px;width:100%;z-index:5}

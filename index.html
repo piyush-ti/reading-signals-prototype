@@ -15,7 +15,7 @@
 <main class="wrap">
 <div id="error" class="error" role="alert"></div>
 <div class="toolbar"><div id="samples" class="samples" aria-label="Choose video"></div><div class="toggles"><label><input id="peopleToggle" type="checkbox" checked>People</label><label><input id="booksToggle" type="checkbox" checked>Books</label></div></div>
-<section class="viewer" aria-label="Reading video">
+<section id="viewer" class="viewer" aria-label="Reading video">
 <div id="screen" class="screen"><video id="video" playsinline preload="auto" muted aria-label="Reading observation video"></video><div id="overlay" class="overlay" aria-hidden="true"></div><div id="videoError" class="screenerror">Video unavailable. Please reload.</div></div>
 <div class="controls"><button id="play" class="iconbutton" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7z"/></svg></button><button id="restart" class="iconbutton secondary" aria-label="Restart video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9a8 8 0 1 1-1 6M5 3v6h6"/></svg></button><span id="time" class="time">0:00 / 0:00</span><label class="sr-only" for="scrub">Video position</label><input id="scrub" class="scrub" type="range" min="0" max="1" step="0.01" value="0"><label class="sr-only" for="speed">Playback speed</label><select id="speed" class="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><button id="fullscreen" class="iconbutton secondary" aria-label="Fullscreen video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></button></div>
 </section>
@@ -81,8 +81,12 @@ function load(index){
 $('play').onclick=async()=>{if(video.paused||video.ended){if(video.ended)seek(0);try{await video.play()}catch{fail('Could not start playback. Please try again.')}}else video.pause()};
 $('restart').onclick=()=>seek(0);$('scrub').oninput=e=>seek(Number(e.target.value));$('speed').onchange=e=>video.playbackRate=Number(e.target.value);
 $('peopleToggle').onchange=paint;$('booksToggle').onchange=paint;
-$('fullscreen').onclick=()=>{if($('screen').requestFullscreen)$('screen').requestFullscreen().catch(()=>fail('Fullscreen is unavailable in this browser.'));else if(video.webkitEnterFullscreen)video.webkitEnterFullscreen()};
-window.addEventListener('resize',paint);document.addEventListener('fullscreenchange',paint);
+function nativeFullscreen(){return document.fullscreenElement||document.webkitFullscreenElement}
+function syncFullscreen(){const active=$('viewer').classList.contains('expanded');$('fullscreen').setAttribute('aria-label',active?'Exit fullscreen':'Fullscreen video');$('fullscreen').setAttribute('aria-pressed',String(active));requestAnimationFrame(paint)}
+async function exitPlayer(){ $('viewer').classList.remove('expanded');document.body.style.overflow='';try{if(nativeFullscreen()){if(document.exitFullscreen)await document.exitFullscreen();else if(document.webkitExitFullscreen)document.webkitExitFullscreen()}}catch{}syncFullscreen() }
+$('fullscreen').onclick=async()=>{if($('viewer').classList.contains('expanded')){await exitPlayer();return}$('viewer').classList.add('expanded');document.body.style.overflow='hidden';syncFullscreen();try{if($('viewer').requestFullscreen)await $('viewer').requestFullscreen();else if($('viewer').webkitRequestFullscreen)$('viewer').webkitRequestFullscreen()}catch{/* The viewport-filling player remains available if native fullscreen is unsupported. */}syncFullscreen()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('viewer').classList.contains('expanded'))exitPlayer()});
+window.addEventListener('resize',paint);document.addEventListener('fullscreenchange',syncFullscreen);document.addEventListener('webkitfullscreenchange',syncFullscreen);
 video.addEventListener('play',()=>{playButton();if(animation)cancelAnimationFrame(animation);tick()});video.addEventListener('pause',()=>{playButton();if(animation)cancelAnimationFrame(animation);paint()});video.addEventListener('ended',()=>{playButton();paint()});video.addEventListener('seeked',paint);video.addEventListener('loadedmetadata',paint);video.addEventListener('error',()=>$('videoError').style.display='grid');
 if(!window.READING_DEMO?.clips?.length){fail('Analysis unavailable. Please reload.');return}
 window.READING_DEMO.clips.forEach((c,i)=>{const b=el('button','sample',(c.menuLabel||(c.generated?'Generated CCTV':'Overhead footage'))+' · '+seconds(c.analysis.duration)+'s');b.onclick=()=>load(i);$('samples').append(b)});load(0);
